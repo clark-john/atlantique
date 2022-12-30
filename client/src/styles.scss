@@ -1,0 +1,112 @@
+@use "styles/navbar";
+@use "styles/colors" as c;
+
+@import url(
+	'https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'
+);
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=swap');
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+html, body, #app {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-color: c.$bg-color;
+}
+
+* {
+	font-family: Inter, sans-serif;
+}
+
+button:not(.delete-link) {
+	border-style: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	transition: filter 200ms;
+	&:hover {
+		filter: brightness(.7);
+	}
+	&:active {
+		transform: translateY(3px);
+	}
+}
+
+// footer
+.footer {
+	background-color: c.$footer-color;
+	padding: 30px;
+	text-align: center;
+	color: white;
+	.title {
+		font-family: Cinzel;
+		font-size: 25px;
+	}
+	.small {
+		font-size: .8rem;
+	}
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	.social-icons {
+		$duration: 200ms;
+		display: flex;
+		gap: 20px;
+		.icon {
+			transition: transform $duration, filter $duration;
+			&:hover {
+				transform: scale(1.25);
+				filter: brightness(.75);
+			}
+		}
+	}
+}
+
+.body {
+	color: c.$overall-text-color;
+	padding: 20px;
+	margin: 0 200px;
+}
+
+.title {
+	font-family: Cinzel;
+	font-size: 2.25rem;
+}
+
+.link {
+	color: c.$links-color;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #00403f;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-arrow {
+	color: white;
+}
+
+.divider {
+	height: 1px;
+	background-color: rgba(#fff, 0.25);
+	margin: 1.75rem 0;
+}
+
+@media only screen and (max-width: 700px) {
+	* {
+		display: none;
+	}
+}
