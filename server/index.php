@@ -1,9 +1,10 @@
 <?php
 require_once "init.php";
 
-use Bloggiton\Router;
+use Atlantique\Router;
 
-$r = new Router();
+$url = "http://localhost:5173";
+$r = new Router($url);
 
 $r->from_arrays(
 	[

@@ -1,7 +1,7 @@
 <?php
 require "read.php";
 
-use Bloggiton\Database;
+use Atlantique\Database;
 
 $db = new Database();
 

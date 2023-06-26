@@ -1,5 +1,5 @@
 <?php
-namespace Bloggiton;
+namespace Atlantique;
 
 class Database {
 	private \PDO $pdo;

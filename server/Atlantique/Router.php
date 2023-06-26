@@ -1,10 +1,13 @@
 <?php
-namespace Bloggiton;
+namespace Atlantique;
 
 class Router {
+	private string $origin;
+	public function __construct($origin = "*"){
+		$this->origin = $origin;
+	}
 	private function process_request($function){
-		// header("Access-Control-Allow-Origin: http://localhost:5173");
-		header("Access-Control-Allow-Origin: http://127.0.0.1:8080");
+		header("Access-Control-Allow-Origin: $this->origin");
 		
 		header("Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS");
 		// null response so that every route can modify it
@@ -28,6 +31,5 @@ class Router {
 		} else {
 			$this->process_request($arrs[$key]['handle']);			
 		}
-		// array
 	}
 }

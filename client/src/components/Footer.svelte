@@ -16,7 +16,7 @@ import { links } from '@/links';
 		</div>		
 	</div>
 	<div>
-		<div class="title">Bloggiton</div>
+		<div class="title">Atlantique</div>
 		<div class="small">Place of Web Blogs</div>
 	</div>
 	<div>&copy; 2022 John Clark. All rights reserved</div>

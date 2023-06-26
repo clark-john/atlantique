@@ -1,5 +1,5 @@
 <?php
-namespace Bloggiton;
+namespace Atlantique;
 
 class Response {
 	public function type($type){

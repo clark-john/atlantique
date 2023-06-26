@@ -8,7 +8,7 @@ const imageBadgeLinks: string[] = [
 </script>
 
 <main>
-	<div class="title">About Bloggiton</div>
+	<div class="title">About <b>Atlantique</b></div>
 	<div>This project is built for fun and effort, also this is my first Svelte project ever. Unfortunately, this may be not responsive for mobile.</div>
 	<ul>
 		<div style="margin: 10px 0;">Stack List:</div>
@@ -19,8 +19,11 @@ const imageBadgeLinks: string[] = [
 </main>
 <style lang="scss" scoped>
 .title {
-	font-family: 'Cinzel';
+	font-family: Cinzel;
 	font-size: 2.25rem;
+	b {
+		font-family: Cinzel;
+	}
 }
 main {
 	display: grid;

@@ -2,7 +2,7 @@
 import { Link } from 'svelte-routing';
 </script>
 <div class="navbar">
-	<Link class="title" to="/">Bloggiton</Link>
+	<Link class="title" to="/">Atlantique</Link>
 	<div class="links">
 		<Link to="/about">About</Link>
 		<Link to="/blogs">Blogs</Link>

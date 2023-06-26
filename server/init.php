@@ -4,7 +4,7 @@ require "functions/utils.php";
 define("SQLITE_URI", "sqlite:app.db");
 define("FULL_URL", "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 
-$dir = "Bloggiton";
+$dir = "Atlantique";
 $files = exclude_dot_dirs(scandir($dir));
 
 foreach ($files as $file){
@@ -21,4 +21,4 @@ foreach ($files as $file){
 
 require "functions/blog.php";
 
-\Bloggiton\Database::init();
+\Atlantique\Database::init();
